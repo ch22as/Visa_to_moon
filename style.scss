@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+$fondo:#205E5D;
+$roca:url(./assets/images/rock.jpg);
+$fondo_espacio: url(./assets/images/background.jpg);
+$fondo_nav:#252839;
+$color-translucido: #1D373C;
+$color_icon:#19BD9C;
+$merriweather: 'Merriweather',serif;
+$montserrat: 'Montserrat', serif;
+
+
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: $fondo;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% repeat(4, 20%) 10%;
+    align-items: center;
+  
+}
+
+aside{
+    background: blue;
+    height: 70%;
+    grid-column: 1 / 3;
+    overflow: hidden;
+    background: $roca top right /200% 200% no-repeat;
+}
+   
+main{
+    background: red;
+    height: 70%;
+    grid-column: 3 / 6;
+    overflow: hidden;
+    
+}
+.main-first-section{
+    width: 100%;
+    height: 60%;
+    background: $fondo_espacio top center/100% 133% no-repeat;
+    z-index: 0;
+}
+
+    .main-first-section article{
+        width: 33%;
+        height: 100%;
+        background:$color-translucido;
+        opacity: 0.3;
+        z-index: 10;
+        padding:3%;
+    }
+
+        .main-first-section article img{
+            width: 30%;
+            height: 30%;
+            background: url(./assets/images/icon_rocket.png) center center /100% 100% no-repeat;
+            color: $color_icon;
+        }
+        .main-first-section article h2{
+            font-size: 1rem;
+            font-family: $merriweather;
+            color:white;
+            padding-bottom: 5%;
+            border-bottom:4px solid $color_icon;
+        }
+        .main-first-section article p{
+            color: white;
+            font-family: $merriweather;
+
+        }
+.main-second-section{
+    width: 100%;
+    height: 40%;
+    background: $fondo_espacio bottom left /100% 290% no-repeat;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+nav{
+    width: 20%;
+    height: 38%;
+    position: absolute;
+    bottom:2rem;
+    right: 25rem;
+    background:$fondo_nav;
+    z-index: 10; 
+    display: flex;
+    flex-direction: column;
+}
+    nav ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:2%;
+        
+    }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+        nav ul li a:hover{
+            color:$color_icon;
+            border-bottom: 2px solid $color_icon;
+        }
+
+    
+.slider{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .slider div{
+        box-shadow: 3px 2px 4px 4px;
+        width: 80%;
+        height: 3%;
+        background: $color_icon;
+    }
+   
+h1{
+    position: absolute;
+    font-size: 4rem;
+    font-family: $merriweather;
+    color:white;
+    bottom:35%;
+    left: 25%;
+}
+
+.aside-right{
+    position: absolute;
+    width: 30%;
+    height: 42%;
+    background: url(./assets/images/rocket.png) center center /140% 100% no-repeat;
+    right:0%;
+    top:15%;
+}
